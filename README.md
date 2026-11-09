@@ -1,6 +1,7 @@
 # NaKus MCP — Slovak unit prices for agents
 
 **Remote MCP (no install):** `https://www.nakus.sk/api/mcp`  
+**Official Registry:** [`sk.nakus/unit-price`](https://registry.modelcontextprotocol.io/v0.1/servers/sk.nakus%2Funit-price/versions/latest) (`server.json` in this repo)  
 **Auth:** none 🔓 · **Brand:** [nakus.sk](https://www.nakus.sk) (NaKus = „na kus“) — **not** nakup.sk
 
 Live landed unit prices (€/piece, €/kg, €/wash…) across Slovak e-shops. Tools always return `buy_url` on `nakus.sk/out/…?src=ai` — never raw merchant or Heureka links.
