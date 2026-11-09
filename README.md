@@ -1,5 +1,8 @@
 # NaKus MCP — Slovak unit prices for agents
 
+[![mcptry](https://mcptry.com/badge/sk.nakus/unit-price)](https://mcptry.com/servers/sk.nakus/unit-price)
+
+
 **Remote MCP (no install):** `https://www.nakus.sk/api/mcp`  
 **Official Registry:** [`sk.nakus/unit-price`](https://registry.modelcontextprotocol.io/v0.1/servers/sk.nakus%2Funit-price/versions/latest) (`server.json` in this repo)  
 **Auth:** none 🔓 · **Brand:** [nakus.sk](https://www.nakus.sk) (NaKus = „na kus“) — **not** nakup.sk
