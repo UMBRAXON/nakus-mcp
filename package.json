@@ -1,0 +1,13 @@
+{
+  "name": "nakus-mcp",
+  "version": "1.0.0",
+  "description": "Remote MCP pointer for nakus.sk unit prices — connect to https://www.nakus.sk/api/mcp",
+  "license": "MIT",
+  "private": false,
+  "keywords": ["mcp", "nakus", "unit-price", "slovakia", "price-comparison"],
+  "homepage": "https://www.nakus.sk/mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UMBRAXON/nakus-mcp.git"
+  }
+}
