@@ -3,7 +3,7 @@
   "name": "sk.nakus/unit-price",
   "title": "NaKus unit price",
   "description": "Slovak unit prices (€/piece, €/kg…) via nakus.sk buy_url — no Heureka.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://www.nakus.sk/mcp",
   "repository": {
     "url": "https://github.com/UMBRAXON/nakus-mcp",
@@ -13,6 +13,15 @@
     {
       "type": "streamable-http",
       "url": "https://www.nakus.sk/api/mcp"
+    }
+  ],
+  "icons": [
+    {
+      "src": "https://www.nakus.sk/apple-touch-icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "180x180"
+      ]
     }
   ]
 }
