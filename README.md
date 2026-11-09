@@ -21,10 +21,11 @@ Live landed unit prices (€/piece, €/kg, €/wash…) across Slovak e-shops. 
 }
 ```
 
-## Tools
+## Tools (v1.2.0)
 
 | Tool | What it does |
 |------|----------------|
+| `list_segments` | Live comparison categories + unit metrics (€/kg, €/kus…) |
 | `search_cite_answers` | Find Cite slugs when you do not know EAN/answer yet |
 | `get_unit_price` | Landed €/unit by Cite `answer` slug, **`ean`**, product slug, or `q` |
 | `get_price_card` | 1200×630 PNG price card URL for multimodal agents |
