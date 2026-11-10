@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "sk.nakus/unit-price",
   "title": "NaKus unit price",
-  "description": "Slovak unit prices (\u20ac/piece, \u20ac/kg\u2026) + live segments via nakus.sk \u2014 buy_url only, no Heureka.",
-  "version": "1.2.0",
+  "description": "Slovak unit prices (\u20ac/piece, \u20ac/kg\u2026) + Cite compare via nakus.sk \u2014 buy_url only.",
+  "version": "1.3.0",
   "websiteUrl": "https://www.nakus.sk/mcp",
   "repository": {
     "url": "https://github.com/UMBRAXON/nakus-mcp",
