@@ -73,3 +73,17 @@ See gist / `docs` on nakus.sk `/ai`.
 ## License
 
 MIT — this stub + CLI. Price data © merchants; comparison UX © Jasne Labs / nakus.sk.
+
+
+## npm publish (owner / CI)
+
+Package name: `nakus-mcp` · bin: `nakus-cena`
+
+```bash
+# after npm login or NPM_TOKEN
+npm publish --access public
+# then: npx nakus-mcp -- "pampers pants 4"
+# or:   npx nakus-cena --ean …
+```
+
+Until published, use: `npx github:UMBRAXON/nakus-mcp -- "…"`
