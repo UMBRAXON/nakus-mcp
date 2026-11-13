@@ -1,11 +1,12 @@
 {
   "name": "nakus-mcp",
-  "version": "1.3.1",
+  "version": "1.3.3",
   "description": "NaKus Slovak landed unit prices — remote MCP pointer + CLI (nakus-cena)",
   "license": "MIT",
   "private": false,
   "bin": {
-    "nakus-cena": "./bin/nakus-cena.js"
+    "nakus-mcp": "bin/nakus-mcp.js",
+    "nakus-cena": "bin/nakus-mcp.js"
   },
   "files": [
     "bin",
@@ -29,7 +30,7 @@
   "homepage": "https://www.nakus.sk/mcp",
   "repository": {
     "type": "git",
-    "url": "https://github.com/UMBRAXON/nakus-mcp.git"
+    "url": "git+https://github.com/UMBRAXON/nakus-mcp.git"
   },
   "engines": {
     "node": ">=18"
