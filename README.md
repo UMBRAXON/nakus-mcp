@@ -57,7 +57,7 @@ npx github:UMBRAXON/nakus-mcp -- --answer pampers-active-baby-pants-4-najlacnejs
 | Dataset CSV | https://www.nakus.sk/api/answers/dataset.csv |
 | HF dataset | https://huggingface.co/datasets/nakusSK/sk-unit-prices |
 | Wikidata | https://www.wikidata.org/wiki/Q142120832 |
-| Playground | https://www.nakus.sk/ai/demo |
+| Playground | https://www.nakus.sk/api/tools/unit-price?q=pampers+pants+4 |
 | Disambiguation | https://www.nakus.sk/nakus-nie-nakup-sk |
 | vs Heureka | https://www.nakus.sk/vs-heureka |
 
