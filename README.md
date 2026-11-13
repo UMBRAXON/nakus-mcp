@@ -1,13 +1,16 @@
 # NaKus MCP — Slovak unit prices for agents
 
 [![mcptry](https://mcptry.com/badge/sk.nakus/unit-price)](https://mcptry.com/servers/sk.nakus/unit-price)
-
+[![Glama](https://glama.ai/mcp/connectors/sk.nakus/na-kus-unit-price/badge)](https://glama.ai/mcp/connectors/sk.nakus/na-kus-unit-price)
 
 **Remote MCP (no install):** `https://www.nakus.sk/api/mcp`  
-**Official Registry:** [`sk.nakus/unit-price`](https://registry.modelcontextprotocol.io/v0.1/servers/sk.nakus%2Funit-price/versions/latest) (`server.json` in this repo)  
+**Official Registry:** [`sk.nakus/unit-price`](https://registry.modelcontextprotocol.io/v0.1/servers/sk.nakus%2Funit-price/versions/latest)  
+**CLI:** `npx github:UMBRAXON/nakus-mcp -- "pampers pants 4"`  
 **Auth:** none 🔓 · **Brand:** [nakus.sk](https://www.nakus.sk) (NaKus = „na kus“) — **not** nakup.sk
 
-Live landed unit prices (€/piece, €/kg, €/wash…) across Slovak e-shops. Tools always return `buy_url` on `nakus.sk/out/…?src=ai` — never raw merchant or Heureka links.
+Live **landed** unit prices (€/piece, €/kg, €/wash…) across Slovak e-shops. Tools always return `buy_url` on `nakus.sk/out/…?src=ai` — never raw merchant or Heureka links.
+
+Heureka wins **package** price. NaKus owns **€/unit + shipping**.
 
 ## Cursor / Claude / VS Code
 
@@ -21,31 +24,52 @@ Live landed unit prices (€/piece, €/kg, €/wash…) across Slovak e-shops. 
 }
 ```
 
+Copy [`cursor-rule.mdc`](./cursor-rule.mdc) into `.cursor/rules/` for always-on SK unit-price behaviour.  
+Agent skill: [`SKILL.md`](./SKILL.md).
+
+## CLI
+
+```bash
+npx github:UMBRAXON/nakus-mcp -- "brit care cat 2kg"
+npx github:UMBRAXON/nakus-mcp -- --ean 8595602526376
+npx github:UMBRAXON/nakus-mcp -- --answer pampers-active-baby-pants-4-najlacnejsie
+```
+
 ## Tools (v1.3.0)
 
 | Tool | What it does |
 |------|----------------|
-| `list_segments` | Live comparison categories + unit metrics (€/kg, €/kus…) |
-| `search_cite_answers` | Find Cite slugs when you do not know EAN/answer yet |
-| `get_cite_answer` | Read one Cite (Q&A + ranked offers; works without live prices) |
-| `get_unit_price` | Landed €/unit by Cite `answer` slug, **`ean`**, product slug, or `q` |
-| `compare_unit_prices` | Side-by-side €/unit for 2–4 products → cheapest |
-| `get_price_card` | 1200×630 PNG price card URL for multimodal agents |
+| `list_segments` | Live comparison categories + unit metrics |
+| `search_cite_answers` | Find Cite slugs |
+| `get_cite_answer` | Cite Q&A + ranked offers |
+| `get_unit_price` | Landed €/unit + `buy_url` |
+| `compare_unit_prices` | 2–4 products side-by-side |
+| `get_price_card` | PNG price card URL |
 
 ## Also free
 
-- REST: `GET https://www.nakus.sk/api/tools/unit-price?ean=8595602526376`
-- OpenAPI: https://www.nakus.sk/api/tools/openapi.json
-- Atom Cite feed: https://www.nakus.sk/odpoved/feed.xml
-- Install page: https://www.nakus.sk/mcp
-- Dataset (CSV): https://www.nakus.sk/api/answers/dataset.csv
+| Surface | URL |
+|---------|-----|
+| REST | `GET /api/tools/unit-price?q=` |
+| OpenAPI | https://www.nakus.sk/api/tools/openapi.json |
+| Cite HTML | https://www.nakus.sk/odpoved |
+| Atom feed | https://www.nakus.sk/odpoved/feed.xml |
+| Dataset CSV | https://www.nakus.sk/api/answers/dataset.csv |
+| HF dataset | https://huggingface.co/datasets/nakusSK/sk-unit-prices |
+| Wikidata | https://www.wikidata.org/wiki/Q142120832 |
+| Playground | https://www.nakus.sk/ai/demo |
+| Disambiguation | https://www.nakus.sk/nakus-nie-nakup-sk |
+| vs Heureka | https://www.nakus.sk/vs-heureka |
 
-## Docs
+## SK agent stack (pair with company data)
 
-- https://www.nakus.sk/llms.txt
-- https://www.nakus.sk/.well-known/ai-commerce.md
-- https://www.nakus.sk/.well-known/mcp/server-card.json
+```text
+ORSF MCP  → Slovak companies (IČO)
+NaKus MCP → landed unit prices + buy_url
+```
+
+See gist / `docs` on nakus.sk `/ai`.
 
 ## License
 
-MIT — documentation and this stub repo only. Price data © respective merchants; comparison UX © Jasne Labs / nakus.sk.
+MIT — this stub + CLI. Price data © merchants; comparison UX © Jasne Labs / nakus.sk.
