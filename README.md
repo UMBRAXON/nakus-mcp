@@ -1,7 +1,7 @@
 # NaKus MCP — Slovak unit prices for agents
 
 [![mcptry](https://mcptry.com/badge/sk.nakus/unit-price)](https://mcptry.com/servers/sk.nakus/unit-price)
-[![Glama](https://glama.ai/mcp/connectors/sk.nakus/na-kus-unit-price/badge)](https://glama.ai/mcp/connectors/sk.nakus/na-kus-unit-price)
+[![NaKus MCP connector](https://glama.ai/mcp/connectors/sk.nakus/na-kus-unit-price/badges/score.svg)](https://glama.ai/mcp/connectors/sk.nakus/na-kus-unit-price)
 
 **Remote MCP (no install):** `https://www.nakus.sk/api/mcp`  
 **Official Registry:** [`sk.nakus/unit-price`](https://registry.modelcontextprotocol.io/v0.1/servers/sk.nakus%2Funit-price/versions/latest)  
